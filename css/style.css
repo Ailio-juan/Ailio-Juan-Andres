@@ -50,7 +50,7 @@ nav a:hover{
 }
 section{
 	display: grid;
-	grid-template-rows: auto 35%;
+	grid-template-rows: 60% auto;
 	grid-template-columns: auto;
 
 }
