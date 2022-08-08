@@ -66,11 +66,14 @@ section{
 footer{
 	background-color: coral;
 }
-#footer{
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
-}											/*hasta aca el home*/
+.footer{
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 1rem;
+}
+
+/*hasta aca el home*/
 
 .productos{	
 									/*productos*/
@@ -161,11 +164,6 @@ section h3{
 	justify-content: center;
 	align-items: center;
 }
-
-
-
-
-
 header{
 	grid-area: header;
 }
@@ -215,7 +213,7 @@ footer{
 @media screen and (min-width: 1200px){
 	.Inicio, .productos, .servicios, .armarTuPc, .ofertas{
 	grid-template-columns: auto;
-	grid-template-rows: 14% auto 5%;
+	grid-template-rows: 14% auto 10%;
 	grid-template-areas: "header " "section " "footer ";
 
 }
@@ -227,12 +225,12 @@ ul .dropdown-menu{
 	display: none;
 }
 }
-/* @media screen and (max-width: 320px) {
-	.menu{
-		display: none;
-	}
-	#inputHeader{
-		display: none;
-	}
-} */
+@media screen and (max-width:800px){
+    .pie-pagina .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:30px;
+        padding: 35px 0px;
+    }
+}
 
