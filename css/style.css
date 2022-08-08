@@ -51,7 +51,7 @@ nav a:hover{
 }
 section{
 	display: grid;
-	grid-template-rows: 60% auto;
+	grid-template-rows: 45% auto auto;
 	grid-template-columns: auto;
 
 }
@@ -61,7 +61,11 @@ section{
 	justify-content: center;
 	width: 100%;
 }
+.servicio-img2{
+	width: 25rem;
+	margin-left: 4rem;
 
+}
 
 footer{
 	background-color: coral;
@@ -116,13 +120,14 @@ align-items: center;
 	grid-template-rows: auto;
 	align-items: center;
 }
-.servicios .servicio-img{
+.servicio-img{
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	padding: 1rem;
 	width: 70%;
 }
+
 .servicios section h2{
 	font-size: 20px;
 	padding-left: 5%;
@@ -226,6 +231,9 @@ ul .dropdown-menu{
 }
 }
 @media screen and (max-width:800px){
+	.mayor-dimension{
+		display: none;
+	}
     .footer{
         width: 90%;
 		height: 100%;
@@ -233,5 +241,6 @@ ul .dropdown-menu{
         grid-gap:30px;
         padding: 35px 0px;
     }
+
 }
 
