@@ -1,0 +1,253 @@
+body{
+	font-family: sans-serif;
+	background-color:aquamarine; 
+	margin: 0;
+	padding: 0;
+}
+.Inicio{
+	display: grid;
+	width: 100%;
+	height: 80rem;
+
+
+}
+header{
+	width: 100%;
+	display: grid;
+	grid-template-columns: 15% 20% auto;
+	grid-template-rows: auto;
+	background-color: coral;
+	border: solid 1px black;
+	align-items: center;
+	justify-content: space-between;
+}
+.img-thumbnail{
+	display: flex;
+	align-items: center;
+	height: 6rem;
+}
+
+.btn{
+	background-color: aquamarine;
+	height: 2rem;
+	width: 100%;
+    &:hover{
+        background-color: coral;
+    }
+}
+
+a{
+	text-decoration: none;
+	color: black;
+
+}
+nav a{
+	font-weight: 600;
+	padding: 3rem;
+    &:hover{
+        background-color: aquamarine;
+        border: solid 1px black;
+        height: 100%;
+    }
+
+}
+
+section{
+	display: grid;
+	grid-template-rows: 40% auto auto;
+	grid-template-columns: auto;
+}
+ #img-fluid1{
+    padding: 0;
+    }
+
+.grilla-section-inicio{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    height: 10rem;
+    #img-thumbnail1{
+        height: 9rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+footer{
+	background-color: coral;
+    .footer{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+        }
+}
+
+
+/*hasta aca el home*/
+
+.productos{	
+									/*productos*/
+	display: grid;
+	width: 100%;
+	height: 80rem;
+	grid-template-columns: auto;
+	grid-template-rows: 14% auto 5%;
+}
+
+.card-body{
+
+display: grid;
+align-items: center;
+}
+.card{
+	width: 50%;
+	padding: 5%;
+	margin: 1rem;
+} 
+.productos section{
+	grid-template-columns: auto auto;
+	grid-template-rows: auto auto;
+	justify-content: space-around;
+	align-items: center;
+}
+
+
+
+.servicios{									/*servicios*/
+	display: grid;
+	width: 100%;
+	height: 80rem;
+	grid-template-columns: auto;
+	grid-template-rows: 14% auto 5%;
+}
+.servicios section{
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-template-rows: auto;
+	align-items: center;
+}
+.servicio-img{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+	width: 70%;
+}
+
+.servicios section h2{
+	font-size: 20px;
+	padding-left: 5%;
+	width: 70%;
+
+}
+.ofertas{								/*ofertas*/
+	display: grid;
+	width: 100%;
+	height: 80rem;
+	grid-template-columns: auto;
+	grid-template-rows: 14% auto 5%;
+}
+.armarTuPc{										/*armar tu pc*/
+	display: grid;
+	width: 100%;
+	height: 80rem;
+	grid-template-columns: auto;
+	grid-template-rows: 14% auto 5%;
+    section{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows:auto ;
+    }
+}
+
+
+
+.img-armar-tu-pc{
+	display: flex;
+	justify-content: center;
+}
+.img-fluid{
+	width: 100%;
+	padding: 5%;
+}
+section h3{
+	display: flex;
+	font-size: 20px;
+	justify-content: center;
+	align-items: center;
+}
+header{
+	grid-area: header;
+}
+section{
+	grid-area: section;
+}
+footer{
+	grid-area: footer;
+}
+
+@media screen and (max-width: 1200px){
+	.Inicio, .productos, .servicios, .armarTuPc, .ofertas{
+    grid-template-columns:auto auto;
+    grid-template-rows: 10% auto 8%;
+    grid-template-areas: "header header" "section section" "footer footer";
+    }
+    .dropdown-menu
+   .img-thumbnail{
+    	height: 5rem;
+    }
+    .menu{
+    	display: none;
+    }
+    header{
+    flex-direction: column;
+    }
+    input{
+	display: none;
+	}
+	section{
+	grid-template-columns:auto ;
+    grid-template-rows:auto auto;
+	}
+	.card-text{
+		display: none;
+	}
+	#inputHeader{
+		display: none;
+	}
+	footer{
+		font-size: 20px;
+	}
+	.footer-item{
+		padding: 10px;
+	}
+}
+@media screen and (min-width: 1200px){
+	.Inicio, .productos, .servicios, .armarTuPc, .ofertas{
+	grid-template-columns: auto;
+	grid-template-rows: 10% auto 8%;
+	grid-template-areas: "header " "section " "footer ";
+
+}
+
+ul .dropdown-menu{
+	display: none;
+}
+.dropdown{
+	display: none;
+}
+}
+@media screen and (max-width:800px){
+	.mayor-dimension{
+		display: none;
+	}
+    .footer{
+        width: 90%;
+		height: 100%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:30px;
+        padding: 35px 0px;
+    }
+
+}
