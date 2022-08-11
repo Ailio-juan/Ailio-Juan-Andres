@@ -60,12 +60,13 @@ section {
 
 #img-fluid1 {
   padding: 0;
+  margin: 0;
 }
 
 .grilla-section-inicio {
   display: grid;
   grid-template-columns: auto auto auto;
-  height: 10rem;
+  height: 8rem;
 }
 .grilla-section-inicio #img-thumbnail1 {
   height: 9rem;
@@ -100,9 +101,13 @@ footer .footer {
 }
 
 .card {
+  background-color: coral;
   width: 50%;
   padding: 5%;
   margin: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .productos section {
@@ -149,6 +154,11 @@ footer .footer {
   grid-template-rows: 14% auto 5%;
 }
 
+#carouselExampleCaptions {
+  width: 30rem;
+  height: 20rem;
+}
+
 .armarTuPc { /*armar tu pc*/
   display: grid;
   width: 100%;
@@ -160,6 +170,9 @@ footer .footer {
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: auto;
+}
+.armarTuPc section .card {
+  height: 50%;
 }
 
 .img-armar-tu-pc {
