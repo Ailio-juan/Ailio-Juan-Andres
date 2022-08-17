@@ -1,13 +1,13 @@
 body{
 	font-family: sans-serif;
-	background-color:aquamarine; 
+	background-color:darkblue; 
 	margin: 0;
 	padding: 0;
 }
 .Inicio{
 	display: grid;
 	width: 100%;
-	height: 80rem;
+	height: 100rem;
 
 
 }
@@ -16,7 +16,7 @@ header{
 	display: grid;
 	grid-template-columns: 15% 20% auto;
 	grid-template-rows: auto;
-	background-color: coral;
+	background-color: orangered;
 	border: solid 1px black;
 	align-items: center;
 	justify-content: space-between;
@@ -28,11 +28,11 @@ header{
 }
 
 .btn{
-	background-color: aquamarine;
+	background-color: darkblue;
 	height: 2rem;
 	width: 100%;
     &:hover{
-        background-color: coral;
+        background-color: orangered;
     }
 }
 
@@ -45,7 +45,8 @@ nav a{
 	font-weight: 600;
 	padding: 3rem;
     &:hover{
-        background-color: aquamarine;
+        background-color: darkblue;
+		color: white;
         border: solid 1px black;
         height: 100%;
     }
@@ -71,17 +72,66 @@ section{
         align-items: center;
         justify-content: center;
     }
+}                 //empieza el footer
+.pie-pagina{
+    width: 100%;
+    background-color: orangered;
+	.grupo-1{
+		width: 100%;
+		max-width: 1200px;
+		margin: auto;
+		display:grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap:50px;
+		padding: 45px 0px;
+		.box figure{
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			img{
+				width: 250px;
+			}
+		}
+	}
 }
 
-footer{
-	background-color: coral;
-    .footer{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 1rem;
-        }
+.pie-pagina .grupo-1 .box h2{
+    color: black;
+    margin-bottom: 25px;
+    font-size: 20px;
 }
+.pie-pagina .grupo-1 .box p{
+    color: #efefef;
+    margin-bottom: 10px;
+}
+.pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: #0d2033;
+    text-align: center;
+    transition: all 300ms ease;
+	&:hover{
+		color: darkblue;
+	}
+}
+
+.pie-pagina .grupo-2{
+    background-color: orangered;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+	small{
+		font-size: 15px;
+	}
+}
+
 
 
 /*hasta aca el home*/
@@ -90,9 +140,9 @@ footer{
 									/*productos*/
 	display: grid;
 	width: 100%;
-	height: 80rem;
+	height: 100rem;
 	grid-template-columns: auto;
-	grid-template-rows: 14% auto 5%;
+	grid-template-rows: 14% auto 20%;
 }
 
 .card-body{
@@ -101,7 +151,7 @@ display: grid;
 align-items: center;
 }
 .card{
-	background-color: coral;
+	background-color: orangered;
 	width: 50%;
 	padding: 5%;
 	margin: 1rem;
@@ -110,7 +160,7 @@ align-items: center;
 	justify-content: center;
 } 
 .productos section{
-	grid-template-columns: auto auto;
+	grid-template-columns: auto auto auto;
 	grid-template-rows: auto auto;
 	justify-content: space-around;
 	align-items: center;
@@ -121,46 +171,76 @@ align-items: center;
 .servicios{									/*servicios*/
 	display: grid;
 	width: 100%;
-	height: 80rem;
+	height: 100rem;
 	grid-template-columns: auto;
-	grid-template-rows: 14% auto 5%;
-}
-.servicios section{
-	display: grid;
-	grid-template-columns: auto auto;
-	grid-template-rows: auto;
-	align-items: center;
-}
-.servicio-img{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 1rem;
-	width: 70%;
+	grid-template-rows: 14% auto 20%;
+	section{
+		display: grid;
+		grid-template-columns: auto auto auto;
+		grid-template-rows: auto auto;
+		align-items: center;
+		justify-content: center;
+	}
 }
 
-.servicios section h2{
-	font-size: 20px;
-	padding-left: 5%;
-	width: 70%;
 
-}
 .ofertas{								/*ofertas*/
 	display: grid;
 	width: 100%;
-	height: 80rem;
+	height: 100rem;
 	grid-template-columns: auto;
-	grid-template-rows: 14% auto 5%;
-}
-#carouselExampleCaptions{
-	width: 30rem;
-	height: 20rem;
+	grid-template-rows: 14% auto 20%;
+	section{
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		padding: 50px 0;
+		h2{
+			width: 100%;
+			color: #999;
+			font-family: monospace;
+		  }
+	  }
 
+	  .card{
+		width: 33.333333%;
+	  }
+	  /* Estilo A */
+	  .estilo-a{
+		font-family: sans-serif;
+		a{
+			text-decoration: none;
+			color: black;
+			&:hover{
+				text-decoration: underline;
+			  }
+		  }
+	  }
+
+
+	  .estilo-a .img-container{
+		overflow: hidden;
+		height: 400px;
+		position: relative;
+		img{
+			width: 100%;
+			position: absolute;
+			top: -25%;
+			transition: all 0.5s;
+		  }
+	  }
+
+	  .estilo-a:hover .img-container img{
+		transform: scale(1.2);
+	  }
+	  
 }
+
 .armarTuPc{										/*armar tu pc*/
 	display: grid;
 	width: 100%;
-	height: 80rem;
+	height: 100rem;
 	grid-template-columns: auto;
 	grid-template-rows: 14% auto 5%;
     section{
@@ -202,7 +282,7 @@ footer{
 @media screen and (max-width: 1200px){
 	.Inicio, .productos, .servicios, .armarTuPc, .ofertas{
     grid-template-columns:auto auto;
-    grid-template-rows: 10% auto 8%;
+    grid-template-rows: 10% auto 15%;
     grid-template-areas: "header header" "section section" "footer footer";
     }
     .dropdown-menu
@@ -238,7 +318,7 @@ footer{
 @media screen and (min-width: 1200px){
 	.Inicio, .productos, .servicios, .armarTuPc, .ofertas{
 	grid-template-columns: auto;
-	grid-template-rows: 10% auto 8%;
+	grid-template-rows: 10% auto 20%;
 	grid-template-areas: "header " "section " "footer ";
 
 }
