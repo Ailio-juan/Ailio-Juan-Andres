@@ -1,6 +1,6 @@
 body {
   font-family: sans-serif;
-  background-color: darkblue;
+  background-color: black;
   margin: 0;
   padding: 0;
 }
@@ -96,25 +96,25 @@ section {
   align-items: center;
 }
 .pie-pagina .grupo-1 .box figure img {
-  width: 250px;
+  width: 15rem;
 }
 
 .pie-pagina .grupo-1 .box h2 {
   color: black;
-  margin-bottom: 25px;
-  font-size: 20px;
+  margin-bottom: 1.8rem;
+  font-size: 1.4rem;
 }
 
 .pie-pagina .grupo-1 .box p {
   color: #efefef;
-  margin-bottom: 10px;
+  margin-bottom: 0.9rem;
 }
 
 .pie-pagina .grupo-1 .red-social a {
   display: inline-block;
   text-decoration: none;
-  width: 45px;
-  height: 45px;
+  width: 2.5rem;
+  height: 2.5rem;
   line-height: 45px;
   color: #fff;
   margin-right: 10px;
@@ -128,12 +128,12 @@ section {
 
 .pie-pagina .grupo-2 {
   background-color: orangered;
-  padding: 15px 10px;
+  padding: 1rem 0.9rem;
   text-align: center;
   color: #fff;
 }
 .pie-pagina .grupo-2 small {
-  font-size: 15px;
+  font-size: 1rem;
 }
 
 /*hasta aca el home*/
@@ -146,19 +146,15 @@ section {
   grid-template-rows: 14% auto 20%;
 }
 
-.card-body {
-  display: grid;
-  align-items: center;
-}
-
 .card {
   background-color: orangered;
-  width: 50%;
   padding: 5%;
   margin: 1rem;
-  display: flex;
+  height: 28rem;
+}
+.card .card-body {
+  display: grid;
   align-items: center;
-  justify-content: center;
 }
 
 .productos section {
@@ -189,7 +185,6 @@ section {
   height: 100rem;
   grid-template-columns: auto;
   grid-template-rows: 14% auto 20%;
-  /* Estilo A */
 }
 .ofertas section {
   width: 100%;
@@ -203,33 +198,6 @@ section {
   color: #999;
   font-family: monospace;
 }
-.ofertas .card {
-  width: 33.333333%;
-}
-.ofertas .estilo-a {
-  font-family: sans-serif;
-}
-.ofertas .estilo-a a {
-  text-decoration: none;
-  color: black;
-}
-.ofertas .estilo-a a:hover {
-  text-decoration: underline;
-}
-.ofertas .estilo-a .img-container {
-  overflow: hidden;
-  height: 400px;
-  position: relative;
-}
-.ofertas .estilo-a .img-container img {
-  width: 100%;
-  position: absolute;
-  top: -25%;
-  transition: all 0.5s;
-}
-.ofertas .estilo-a:hover .img-container img {
-  transform: scale(1.2);
-}
 
 .armarTuPc { /*armar tu pc*/
   display: grid;
@@ -240,11 +208,23 @@ section {
 }
 .armarTuPc section {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto;
   grid-template-rows: auto;
 }
-.armarTuPc section .card {
-  height: 50%;
+.armarTuPc section .Amd-Intel {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.armarTuPc section .Amd-Intel .card {
+  height: 32rem;
+}
+.armarTuPc section .armarPC-Amd-Intel {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+}
+.armarTuPc section .armarPC-Amd-Intel .card h5 {
+  font-size: 1rem;
 }
 
 .img-armar-tu-pc {
@@ -291,24 +271,9 @@ footer {
   header {
     flex-direction: column;
   }
-  input {
-    display: none;
-  }
   section {
     grid-template-columns: auto;
     grid-template-rows: auto auto;
-  }
-  .card-text {
-    display: none;
-  }
-  #inputHeader {
-    display: none;
-  }
-  footer {
-    font-size: 20px;
-  }
-  .footer-item {
-    padding: 10px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -325,14 +290,19 @@ footer {
   }
 }
 @media screen and (max-width: 800px) {
-  .mayor-dimension {
-    display: none;
-  }
-  .footer {
+  .pie-pagina .grupo-1 {
     width: 90%;
-    height: 100%;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 30px;
     padding: 35px 0px;
+  }
+  #inputHeader {
+    display: none;
+  }
+  .armarTuPc section .armarPC-Amd-Intel {
+    grid-template-columns: auto auto;
+  }
+  .productos section {
+    grid-template-columns: auto auto;
   }
 }/*# sourceMappingURL=style.css.map */
