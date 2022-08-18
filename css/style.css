@@ -5,7 +5,7 @@ body {
   padding: 0;
 }
 
-.Inicio {
+.Inicio, .armarTuPc, .ofertas, .servicios, .productos {
   display: grid;
   width: 100%;
   height: 130rem;
@@ -13,6 +13,7 @@ body {
 
 header {
   width: 100%;
+  height: 9rem;
   display: grid;
   grid-template-columns: 15% 20% auto;
   grid-template-rows: auto;
@@ -134,14 +135,7 @@ section .movile-seccion {
 }
 
 /*hasta aca el home*/
-.productos {
-  /*productos*/
-  display: grid;
-  width: 100%;
-  height: 100rem;
-  grid-template-columns: auto;
-  grid-template-rows: 14% auto 20%;
-}
+.productos { /*productos*/ }
 .productos .card {
   background-color: orangered;
   padding: 5%;
@@ -161,13 +155,7 @@ section .movile-seccion {
   align-items: center;
 }
 
-.servicios { /*servicios*/
-  display: grid;
-  width: 100%;
-  height: 100rem;
-  grid-template-columns: auto;
-  grid-template-rows: 14% auto 20%;
-}
+.servicios { /*servicios*/ }
 .servicios section {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -176,13 +164,7 @@ section .movile-seccion {
   justify-content: center;
 }
 
-.ofertas { /*ofertas*/
-  display: grid;
-  width: 100%;
-  height: 100rem;
-  grid-template-columns: auto;
-  grid-template-rows: 14% auto 20%;
-}
+.ofertas { /*ofertas*/ }
 .ofertas section {
   width: 100%;
   display: flex;
@@ -196,13 +178,7 @@ section .movile-seccion {
   font-family: monospace;
 }
 
-.armarTuPc { /*armar tu pc*/
-  display: grid;
-  width: 100%;
-  height: 100rem;
-  grid-template-columns: auto;
-  grid-template-rows: 14% auto 5%;
-}
+.armarTuPc { /*armar tu pc*/ }
 .armarTuPc section {
   display: grid;
   grid-template-columns: auto;
@@ -275,11 +251,11 @@ footer {
   #carouselExampleControls {
     display: none;
   }
-  .Inicio .img-fluid {
+  .Inicio .img-fluid, .productos .img-fluid, .servicios .img-fluid, .ofertas .img-fluid, .armarTuPc .img-fluid {
     margin: 0;
     padding: 0;
   }
-  .Inicio .card-body {
+  .Inicio .card-body, .productos .card-body, .servicios .card-body, .ofertas .card-body, .armarTuPc .card-body {
     display: none;
   }
 }
@@ -295,7 +271,7 @@ footer {
   .dropdown {
     display: none;
   }
-  .Inicio .movile-seccion {
+  .Inicio .movile-seccion, .productos .movile-seccion, .servicios .movile-seccion, .ofertas .movile-seccion, .armarTuPc .movile-seccion {
     display: none;
   }
 }
