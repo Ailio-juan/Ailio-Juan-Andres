@@ -27,13 +27,8 @@ header{
 	height: 6rem;
 }
 
-.btn{
-	background-color: darkblue;
-	height: 2rem;
-	width: 100%;
-    &:hover{
-        background-color: orangered;
-    }
+.d-flex .btn-buscar{
+	width: 20rem;
 }
 
 a{
@@ -63,18 +58,20 @@ section{
 		grid-template-rows: auto auto auto;
 	}
 }
-
+.card{
+	padding: 1rem;
+	margin: 1rem;
+	background-color: orangered;
+}
 .grilla-section-inicio{
     display: grid;
     grid-template-columns: auto auto auto;
-    height: 8rem;
-    #img-thumbnail1{
-        height: 9rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-}                 //empieza el footer
+	grid-template-rows: auto;
+	align-items: center;
+
+
+}    
+            //empieza el footer
 .pie-pagina{
     width: 100%;
     background-color: orangered;
@@ -321,26 +318,14 @@ ul .dropdown-menu{
 			grid-gap:30px;
 			padding: 35px 0px;
 		}
-		#inputHeader{
+		.d-flex{
 			display: none;
 		}
 
-		#carouselExampleControls{
-			display: none;
-		}
-		.Inicio {
-			.img-fluid{
-				margin: 0;
-				padding: 0;
-			}
-			.card-body{
-			display: none;
-		}
 		.armarTuPc section .armarPC-Amd-Intel{
 			grid-template-columns: auto auto;
 		}
 		.productos section{
 			grid-template-columns: auto auto;
 		}
-		}
-}
+	}
