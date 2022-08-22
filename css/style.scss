@@ -1,10 +1,10 @@
 body{
-	font-family: sans-serif;
-	background-color:black; 
+	font-family: monaco,Consolas,Lucida Console,monospace;
+	background-color: #2F1847;
 	margin: 0;
 	padding: 0;
 }
-$estilo:(color: orangered, 1rem : 1rem );
+$estilo:(color: #2e86ab, 1rem : 1rem );
 .Inicio{
 	display: grid;
 	width: 100%;
@@ -16,7 +16,7 @@ header{
 	width: 100%;
 	height: 9rem;
 	display: grid;
-	grid-template-columns: 15% 20% auto;
+	grid-template-columns: 10% 25% auto;
 	grid-template-rows: auto;
 	background-color: map-get($estilo, color);
 	border: solid 1px black;
@@ -42,9 +42,8 @@ nav a{
 	font-weight: 600;
 	padding: 3rem;
     &:hover{
-        background-color: darkblue;
+        background-color: #2F1847;
 		color: white;
-        border: solid 1px black;
         height: 100%;
     }
 
@@ -63,8 +62,19 @@ section{
 .card{
 	padding: 1rem;
 	margin: 1rem;
+	height: 28rem;
+	width: 22rem;
 	background-color: map-get($estilo, color);
+	&:hover{
+		box-shadow: 5px 5px 3px #686963;
+		}
+	.card-body{
+		display: grid;
+		align-items: center;
+		}
 }
+
+
 .grilla-section-inicio{
     display: grid;
     grid-template-columns: auto auto auto;
@@ -139,17 +149,6 @@ section{
 
 .productos{																		/*productos*/
 	@extend .Inicio;
-	.card{
-		background-color: map-get($estilo, color);
-		padding: 5%;
-		margin: 1rem;
-		height: 28rem;
-		width: 22rem;
-		.card-body{
-			display: grid;
-			align-items: center;
-			}
-	} 
 }
 
 
@@ -168,8 +167,7 @@ section{
 		display: grid;
 		grid-template-columns: auto auto auto;
 		grid-template-rows: auto auto;
-		align-items: center;
-		justify-content: center;
+
 	}
 }	
 
@@ -241,38 +239,63 @@ footer{
 
 @media screen and (max-width: 1200px){
 	.Inicio, .productos, .servicios, .armarTuPc, .ofertas{
+	height: 250rem;
     grid-template-columns:auto auto;
-    grid-template-rows: 10% auto 15%;
+    grid-template-rows: 5% auto 15%;
     grid-template-areas: "header header" "section section" "footer footer";
     }
     .dropdown-menu
    .img-thumbnail{
     	height: 5rem;
     }
-    .menu{
-    	display: none;
-    }
-    header{
-    flex-direction: column;
-    }
-
-	section{
-	grid-template-columns:auto ;
-    grid-template-rows:auto auto;
+	header{
+		padding: 0;
+		margin: 0;
+		.menu{
+			display: none;
+		}
 	}
 	#carouselExampleControls{
 		display: none;
 	}
 	.Inicio {
+		section{
+			grid-template-rows: 65% auto;
+
+		}
 		.img-fluid{
 			margin: 0;
 			padding: 0;
 		}
-		.card-body{
-		display: none;
+}
+.productos{
+	section{
+		grid-template-columns: auto auto;
 	}
 }
 
+.servicios{
+	section{
+		grid-template-columns: auto auto;
+
+	}
+}
+.armarTuPc{
+	
+	section{
+		grid-template-rows: 20% auto;
+		.Amd-Intel{
+			.card{
+				height: 90%;
+			}
+			grid-template-columns: auto auto;
+		}
+		.armarPC-Amd-Intel{
+			grid-template-columns: auto auto;
+			justify-content: space-around;
+		}
+	}
+}
 }
 @media screen and (min-width: 1200px){
 	.Inicio, .productos, .servicios, .armarTuPc, .ofertas{
@@ -295,20 +318,29 @@ ul .dropdown-menu{
 
 }
 @media screen and (max-width:900px){
+	.Inicio{
+		section{
+			grid-template-columns: auto;
+			grid-template-rows: auto auto;
+			.grilla-section-inicio{
+				grid-template-columns: auto;
+			}
+		}
+	}
 		.pie-pagina .grupo-1{
 			width: 90%;
 			grid-template-columns: repeat(1, 1fr);
 			grid-gap:30px;
 			padding: 35px 0px;
 		}
-		.d-flex{
-			display: none;
+		.productos{
+			section{
+				grid-template-columns: auto auto;
+			}
 		}
-
-		.armarTuPc section .armarPC-Amd-Intel{
-			grid-template-columns: auto auto;
-		}
-		.productos section{
-			grid-template-columns: auto auto;
+		.servicios {
+			section{
+				grid-template-columns: auto;
+			}
 		}
 	}
