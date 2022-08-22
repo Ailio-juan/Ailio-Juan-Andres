@@ -38,9 +38,7 @@ nav a{
 	font-weight: 600;
 	padding: 3rem;
     &:hover{
-        background-color: #2F1847;
 		color: white;
-        height: 100%;
     }
 
 }
@@ -299,7 +297,7 @@ footer{
 	.Inicio, .productos, .servicios, .armarTuPc, .ofertas{
 
 	grid-template-columns: auto;
-	grid-template-rows: 10% auto 20%;
+	grid-template-rows: 7% auto 20%;
 	grid-template-areas: "header " "section " "footer ";
 
 }
@@ -322,13 +320,22 @@ ul .dropdown-menu{
 
 }
 @media screen and (max-width:900px){
+	header{
+		grid-template-columns: auto auto auto;
+	}
+
 	.Inicio{
 		section{
 			grid-template-columns: auto;
 			grid-template-rows: auto auto;
-			
+			.img-fluid{
+				height: 100%;
+			}
 			.grilla-section-inicio{
 				grid-template-columns: auto;
+				.card-text{
+					display: none;
+				}
 			}
 		}
 	}

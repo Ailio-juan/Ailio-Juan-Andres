@@ -38,9 +38,7 @@ nav a {
   padding: 3rem;
 }
 nav a:hover {
-  background-color: #2F1847;
   color: white;
-  height: 100%;
 }
 
 .Inicio section, .armarTuPc section, .ofertas section, .servicios section, .productos section {
@@ -270,7 +268,7 @@ footer {
 @media screen and (min-width: 1200px) {
   .Inicio, .productos, .servicios, .armarTuPc, .ofertas {
     grid-template-columns: auto;
-    grid-template-rows: 10% auto 20%;
+    grid-template-rows: 7% auto 20%;
     grid-template-areas: "header " "section " "footer ";
   }
   ul .dropdown-menu {
@@ -284,12 +282,21 @@ footer {
   }
 }
 @media screen and (max-width: 900px) {
+  header {
+    grid-template-columns: auto auto auto;
+  }
   .Inicio section, .productos section, .servicios section, .ofertas section, .armarTuPc section {
     grid-template-columns: auto;
     grid-template-rows: auto auto;
   }
+  .Inicio section .img-fluid, .productos section .img-fluid, .servicios section .img-fluid, .ofertas section .img-fluid, .armarTuPc section .img-fluid {
+    height: 100%;
+  }
   .Inicio section .grilla-section-inicio, .productos section .grilla-section-inicio, .servicios section .grilla-section-inicio, .ofertas section .grilla-section-inicio, .armarTuPc section .grilla-section-inicio {
     grid-template-columns: auto;
+  }
+  .Inicio section .grilla-section-inicio .card-text, .productos section .grilla-section-inicio .card-text, .servicios section .grilla-section-inicio .card-text, .ofertas section .grilla-section-inicio .card-text, .armarTuPc section .grilla-section-inicio .card-text {
+    display: none;
   }
   .pie-pagina .grupo-1 {
     width: 90%;
