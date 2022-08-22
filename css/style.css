@@ -48,15 +48,15 @@ nav a:hover {
   height: 100%;
 }
 
-section {
+.Inicio section, .armarTuPc section, .ofertas section, .servicios section, .productos section {
   display: grid;
   grid-template-rows: 40% auto auto;
   grid-template-columns: auto;
 }
-section .movile-seccion {
+.Inicio section .movile-seccion, .armarTuPc section .movile-seccion, .ofertas section .movile-seccion, .servicios section .movile-seccion, .productos section .movile-seccion {
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: auto auto auto;
+  margin: 0;
 }
 
 .card {
@@ -252,9 +252,14 @@ footer {
     padding: 0;
   }
   .productos section {
+    grid-template-rows: auto;
     grid-template-columns: auto auto;
   }
+  .servicios {
+    height: 100 rem;
+  }
   .servicios section {
+    grid-template-rows: auto;
     grid-template-columns: auto auto;
   }
   .armarTuPc section {
@@ -302,6 +307,8 @@ footer {
     padding: 35px 0px;
   }
   .productos section {
+    margin: 0;
+    grid-template-rows: auto;
     grid-template-columns: auto auto;
   }
   .servicios section {
