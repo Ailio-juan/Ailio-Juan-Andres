@@ -321,7 +321,10 @@ ul .dropdown-menu{
 }
 @media screen and (max-width:900px){
 	header{
-		grid-template-columns: auto auto auto;
+		#dalee{
+			display: none;
+		}
+		grid-template-columns: auto auto;
 	}
 
 	.Inicio{
