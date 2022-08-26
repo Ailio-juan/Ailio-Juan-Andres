@@ -8,7 +8,7 @@ body {
 .Inicio, .armarTuPc, .ofertas, .servicios, .productos {
   display: grid;
   width: 100%;
-  height: 130rem;
+  height: 140rem;
 }
 
 header {
@@ -26,6 +26,11 @@ header {
   display: flex;
   align-items: center;
   height: 6rem;
+}
+
+#dalee .btn-busca:hover {
+  border: 0% solid black;
+  background-color: #2e86ab;
 }
 
 a {
@@ -46,6 +51,9 @@ nav a:hover {
   grid-template-rows: 40% auto auto;
   grid-template-columns: auto;
 }
+.Inicio section #carouselExampleControls, .armarTuPc section #carouselExampleControls, .ofertas section #carouselExampleControls, .servicios section #carouselExampleControls, .productos section #carouselExampleControls {
+  height: 30rem;
+}
 .Inicio section .movile-seccion, .armarTuPc section .movile-seccion, .ofertas section .movile-seccion, .servicios section .movile-seccion, .productos section .movile-seccion {
   display: grid;
   grid-template-columns: auto;
@@ -65,6 +73,7 @@ nav a:hover {
 .card .card-body {
   display: grid;
   align-items: center;
+  height: 4rem;
 }
 
 .grilla-section-inicio {
@@ -154,16 +163,8 @@ nav a:hover {
 
 .ofertas { /*ofertas*/ }
 .ofertas section {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  padding: 50px 0;
-}
-.ofertas section h2 {
-  width: 100%;
-  color: #999;
-  font-family: monospace;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto;
 }
 
 .armarTuPc { /*armar tu pc*/ }
@@ -177,7 +178,7 @@ nav a:hover {
   grid-template-columns: auto auto;
 }
 .armarTuPc section .Amd-Intel .card {
-  height: 32rem;
+  height: 35rem;
 }
 .armarTuPc section .armarPC-Amd-Intel {
   display: grid;
@@ -219,7 +220,7 @@ footer {
 
 @media screen and (max-width: 1200px) {
   .Inicio, .productos, .servicios, .armarTuPc, .ofertas {
-    height: 250rem;
+    height: 290rem;
     grid-template-columns: auto auto;
     grid-template-rows: 5% auto 15%;
     grid-template-areas: "header header" "section section" "footer footer";
@@ -264,6 +265,13 @@ footer {
     grid-template-columns: auto auto;
     justify-content: space-around;
   }
+  .ofertas {
+    height: 180rem;
+  }
+  .ofertas section {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+  }
 }
 @media screen and (min-width: 1200px) {
   .Inicio, .productos, .servicios, .armarTuPc, .ofertas {
@@ -298,8 +306,8 @@ footer {
   .Inicio section .grilla-section-inicio, .productos section .grilla-section-inicio, .servicios section .grilla-section-inicio, .ofertas section .grilla-section-inicio, .armarTuPc section .grilla-section-inicio {
     grid-template-columns: auto;
   }
-  .Inicio section .grilla-section-inicio .card-text, .productos section .grilla-section-inicio .card-text, .servicios section .grilla-section-inicio .card-text, .ofertas section .grilla-section-inicio .card-text, .armarTuPc section .grilla-section-inicio .card-text {
-    display: none;
+  .Inicio section .grilla-section-inicio .card, .productos section .grilla-section-inicio .card, .servicios section .grilla-section-inicio .card, .ofertas section .grilla-section-inicio .card, .armarTuPc section .grilla-section-inicio .card {
+    height: 22rem;
   }
   .pie-pagina .grupo-1 {
     width: 90%;
@@ -319,7 +327,16 @@ footer {
   .armarTuPc section .Amd-Intel {
     grid-template-columns: auto;
   }
+  .armarTuPc section .Amd-Intel .card {
+    height: 23rem;
+  }
   .armarTuPc section .armarPC-Amd-Intel {
+    grid-template-columns: auto;
+  }
+  .ofertas {
+    height: 290rem;
+  }
+  .ofertas section {
     grid-template-columns: auto;
   }
 }/*# sourceMappingURL=style.css.map */
